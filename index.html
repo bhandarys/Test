@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Page Title</title>
+<meta name=”description” content=”Description”>
+<meta name=”keywords” content=”Keyword1, Keyword2″>
+<script>
+window.onload = function () {
+    var n, key, vars = {},
+        searchString = window.location.search;
+    searchString = searchString.replace(/^\?/, '').split('&');
+    for (n = 0; n < searchString.length; n++) {
+        key = searchString[n].split('=');
+        vars[key[0]] = key[1];
+    }
+    window.frames['pwa'].frameElement.src = 'https://bhandarys.github.io/seva-pwa/#/user-itinerary?itrcode=' + vars.var1;
+    }
+</script>
+</head>
+<frameset rows=”100%,0″ border=”0″>
+<frame name="pwa" frameborder=”0″>
+<frame frameborder=”0″>
+</frameset>
+</html>
